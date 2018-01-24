@@ -1,17 +1,3 @@
-// function convertHTML(str) {
-//     // &colon;&rpar;
-//     return str;
-// }
-
-// convertHTML("test");
-
-
-// Convert the characters & , < , > , " (double quote), and ' (apostrophe), in a string to their corresponding HTML entities.
-
-// Remember to use Read - Search - Ask
-// if you get stuck.Try to pair program.Write your own code.
-
-// Here are some helpful links:
 document.addEventListener("DOMContentLoaded", function (event) {
   var regexCode;
 
@@ -49,13 +35,3 @@ document.addEventListener("DOMContentLoaded", function (event) {
   main();
 });
 
-
-////////////////////
-
-
-// var newstring = "Simple patterns are constructed of characters for which you want to find a direct match. For example, the pattern /abc/ matches character combinations in strings only when exactly the characters 'abc' occur together and in that order. Such a match would succeed in the strings"
-
-// var re = /match/;
-// var str = "there is an abc"
-// var result = newstring.match(re);
-// console.log(result);
