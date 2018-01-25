@@ -23,11 +23,17 @@
       width: 100px;
       padding: 15px;
     }
+    .hidden {
+      visibility: hidden;
+    }
     .margin-reasonable {
       margin: 10px auto;
     }
     .responsive {
       width: 80%;
+    }
+    #resultBox {
+      color:blue;
     }
   </style>
 </head>
@@ -35,14 +41,21 @@
 
 <body>
   <form id="myForm">
-    
     <div>Text to Add:</div>
     <textarea class="margin-reasonable responsive" id="userText" type="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius sed quisquam ipsum, iure iusto quo numquam totam dolore, sit molestias at esse tempora cupiditate possimus doloribus consectetur cumque dolor ea.</textarea>
-    <div>Regex:</div>
-    <input class="responsive margin-reasonable" id="codeInput" type="text" name="name" placeholder="">
-    <button autofocus="true" class="margin-reasonable" id="myButton" type="submit">Add</button>
+    <!-- <div>Regex:</div>
+    <input class="responsive margin-reasonable" id="codeInput" type="text" name="name" placeholder=""> -->
+    <div>Replace this:</div>
+    <input class="responsive margin-reasonable" id="original_1" type="text" name="original" placeholder="">
+    <div>with this:</div>
+    <input class="responsive margin-reasonable" id="replacer_1" type="text" name="replacer" placeholder="">
+    <button autofocus="true" class="margin-reasonable" id="myButton" type="submit">Replace</button>
   </form>
+
   <div id="showTextBox" class="responsive margin-reasonable">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius sed quisquam ipsum, iure iusto quo numquam totam dolore, sit molestias at esse tempora cupiditate possimus doloribus consectetur cumque dolor ea.</div>
+
+  <div id="resultText" class="responsive margin-reasonable hidden"><span class="responsive margin-reasonable" id="resultBox"></span></div>
+  
   <script src="./script.js"></script>
 </body>
 </html>
