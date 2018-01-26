@@ -13,17 +13,37 @@ document.addEventListener("DOMContentLoaded", function (event) {
   //   return document.getElementById("codeInput").value;
   // }
 
+  //function that will create an object with the pairs of words the user input. Original word - word that will replace.
   function createReplacerObj() {
-    var replacer;
-    var originalValue = document.getElementById("original_1").value;
-    var replacerValue = document.getElementById("replacer_1").value;
-    return replacer = {
-      [originalValue] : replacerValue,
+    var replacer = {};
+    var originalWords = document.querySelectorAll(".original");
+    var replacingWords = document.querySelectorAll(".replacer");
+
+    for (var i = 0; i < originalWords.length; i++) {
+      replacer[originalWords[i].value] = replacingWords[i].value
     }
+    return replacer;
   }
 
+  //this function return a regex pattern based on the user input
+  function createRegexCode() {
+    var originalWords = document.querySelectorAll(".original");
+    var regexCode = "";
+
+    for (var i = 0; i < originalWords.length; i++) {
+      if (i < originalWords.length - 1) {
+        regexCode += originalWords[i].value + "|";
+      } else {
+        regexCode += originalWords[i].value;
+      }
+    }
+
+    return regexCode;
+  }
+
+  //this function applies the replace function based on the regex code (created with creteRegexCode function) and the string (the text) provided by the user.
   function applyRegex(str) {
-    var re = new RegExp(document.getElementById("original_1").value, "g");
+    var re = new RegExp(createRegexCode(), "g");
     var str = str.replace(re, function (match) {
       return createReplacerObj()[match];
     })
@@ -37,6 +57,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
     resultBox.innerText = result;
   }
 
+
+  //Main function of the program.
   function main() {
     var userText = document.getElementById("userText");
     var myForm = document.getElementById("myForm");
