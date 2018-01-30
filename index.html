@@ -4,75 +4,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif !important;
-    }
-    textarea {
-      resize: none; 
-      height: 200px;
-      display: block
-    }
-    input {
-      resize: none; 
-      display: block; 
-    }
-    button {
-      display: block;
-      width: 100px;
-      padding: 15px;
-    }
-    .hidden {
-      visibility: hidden;
-    }
-    .margin-reasonable {
-      margin: 10px auto;
-    }
-    .responsive {
-      width: 80%;
-    }
-    #resultBox {
-      color:blue;
-    }
-  </style>
+  <title>Replacer Tool</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="./script.js"></script>
 </head>
 
 
 <body>
   <form id="myForm">
-    <div>Text to Add:</div>
-    <textarea class="margin-reasonable responsive" id="userText" type="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius sed quisquam ipsum, iure iusto quo numquam totam dolore, sit molestias at esse tempora cupiditate possimus doloribus consectetur cumque dolor ea.</textarea>
-    <!-- <div>Regex:</div>
-    <input class="responsive margin-reasonable" id="codeInput" type="text" name="name" placeholder=""> -->
-    
-    <div>Replace this:</div>
-    <input class="original responsive margin-reasonable" id="original_1" type="text" name="original" placeholder="">
-    <div>with this:</div>
-    <input class="replacer responsive margin-reasonable" id="replacer_1" type="text" name="replacer" placeholder="">
+    <div class="container-head">
+      <div><strong><u>Text to Add</u>:</strong></div>
+      <textarea class="margin-r responsive" id="userText" type="text"></textarea>
+    </div>
+      <!-- <div>Regex:</div>
+      <input class="responsive margin-r" id="codeInput" type="text" name="name" placeholder=""> -->
 
-    <div>Replace this:</div>
-    <input class="original responsive margin-reasonable" id="original_2" type="text" name="original" placeholder="">
-    <div>with this:</div>
-    <input class="replacer responsive margin-reasonable" id="replacer_2" type="text" name="replacer" placeholder="">
+    <div class="container-replacing">
+      <div class="imput-texts">
+      <div><strong><u>Replace this</u>:</strong></div>
+        <input class="original" id="original_1" type="text" name="original" placeholder="">
+        <input class="original" id="original_2" type="text" name="original" placeholder="">
+        <input class="original" id="original_3" type="text" name="original" placeholder="">
+        <input class="original" id="original_4" type="text" name="original" placeholder="">
+      </div>
 
-    <div>Replace this:</div>
-    <input class="original responsive margin-reasonable" id="original_3" type="text" name="original" placeholder="">
-    <div>with this:</div>
-    <input class="replacer responsive margin-reasonable" id="replacer_3" type="text" name="replacer" placeholder="">
-
-    <div>Replace this:</div>
-    <input class="original responsive margin-reasonable" id="original_4" type="text" name="original" placeholder="">
-    <div>with this:</div>
-    <input class="replacer responsive margin-reasonable" id="replacer_4" type="text" name="replacer" placeholder="">
-    
-    <button autofocus="true" class="margin-reasonable" id="myButton" type="submit">Replace</button>
+      <div class="imput-texts">
+      <div><strong><u>with this</u>:</strong></div>
+        <input class="replacer" id="replacer_1" type="text" name="replacer" placeholder="">
+        <input class="replacer" id="replacer_2" type="text" name="replacer" placeholder="">
+        <input class="replacer" id="replacer_3" type="text" name="replacer" placeholder="">
+        <input class="replacer" id="replacer_4" type="text" name="replacer" placeholder="">
+      </div>  
+      <button autofocus="true" class="margin-r responsive applyb" id="myButton" type="submit">Replace</button>
+    </div>
   </form>
 
-  <div id="showTextBox" class="responsive margin-reasonable">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius sed quisquam ipsum, iure iusto quo numquam totam dolore, sit molestias at esse tempora cupiditate possimus doloribus consectetur cumque dolor ea.</div>
+  <div class="container-head">
+    <div><strong><u>Preview</u>:</strong></div>
+    <div id="showTextBox" class="responsive margin-r"></div>
+    <div><strong><u>Result</u>:</strong></div>
+    <div id="resultText" class="responsive margin-r hidden"><span class="responsive margin-r" id="resultBox"></span></div>
+  </div>
 
-  <div id="resultText" class="responsive margin-reasonable hidden"><span class="responsive margin-reasonable" id="resultBox"></span></div>
-  
-  <script src="./script.js"></script>
 </body>
 </html>
