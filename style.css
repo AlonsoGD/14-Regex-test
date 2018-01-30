@@ -1,0 +1,65 @@
+body {
+  font-family: Arial, Helvetica, sans-serif !important;
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+textarea {
+  resize: none;
+  height: 200px;
+  display: block
+}
+
+input {
+  resize: none;
+  display: block;
+  margin: 10px;
+}
+
+button {
+  display: block;
+  text-align: center;
+  height: 40px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.margin-r {
+  margin: 10px auto;
+}
+
+.margin-rleft {
+  margin: 10px 25px;
+}
+
+.responsive {
+  width: 100%;
+}
+
+.width-80 {
+
+}
+
+#resultBox {
+  color: blue;
+}
+
+.container-head{
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 50% 50%;
+}
+
+.container-replacing {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%;
+}
+
+.applyb {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
